@@ -18,7 +18,6 @@ app.post('/c', async (req: FastifyRequest<{ Body: ISheet }>, res) => {
 
 app.get('/:id', async (req: FastifyRequest<{ Params: { id: string } }>, res) => {
 	const sheet = await Sheet.findById(req.params.id).exec();
-	console.log(sheet);
 	if (!sheet)
 		return res.code(400);
 

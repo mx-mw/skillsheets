@@ -1,16 +1,16 @@
-import { Schema, model, connect } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
-interface IPair {
+export interface IPair {
 	name: string,
 	level: string,
-};
+}
 
-interface IProject {
+export interface IProject {
 	name: string,
 	logo: string
-};
+}
 
-interface ISheet {
+export interface ISheet {
 	scopes: IPair[],
 	languages: IPair[],
 	frameworks: IPair[],
@@ -18,7 +18,7 @@ interface ISheet {
 	projects: IProject[],
 	name: string,
 	species: string,
-};
+}
 
 const SPair = {
 	name: String,
